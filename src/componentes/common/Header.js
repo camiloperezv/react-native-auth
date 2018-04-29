@@ -6,11 +6,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 // Hacer componente
-const Header = (props) => {
+const Header = ({ headerText }) => {
   const { viewStyle, textStyle } = styles;
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>{props.headerText}</Text>
+      <Text style={textStyle}>{headerText}</Text>
     </View>
   );
 };
@@ -38,4 +38,4 @@ const styles = {
 // Sera un componente hijo del root, albums
 // ya que no usa la declaracion del root component, debe hacerse usable, o exportable
 
-export default Header;
+export { Header };
